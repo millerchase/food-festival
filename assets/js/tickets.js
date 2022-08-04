@@ -1,12 +1,12 @@
-require("bootstrap");
-const createEl = require("./domMethods");
+require('bootstrap');
+const createEl = require('./domMethods');
 
 $(document).ready(function () {
-  const purchaseBtn = document.getElementById("purchaseBtn");
-  const purchaseEmail = document.getElementById("purchaseEmail");
-  const modalEl = document.querySelector(".modal-content");
-  const modalBodyEl = document.querySelector(".modal-body");
-  const modalFooterEl = document.querySelector(".modal-footer");
+  const purchaseBtn = document.getElementById('purchaseBtn');
+  const purchaseEmail = document.getElementById('purchaseEmail');
+  const modalEl = document.querySelector('.modal-content');
+  const modalBodyEl = document.querySelector('.modal-body');
+  const modalFooterEl = document.querySelector('.modal-footer');
 
   function purchaseTicket() {
     modalEl.removeChild(modalBodyEl);
@@ -14,15 +14,15 @@ $(document).ready(function () {
 
     modalEl.append(
       createEl(
-        "div",
-        { class: "modal-body" },
+        'div',
+        { class: 'modal-body' },
         createEl(
-          "h5",
-          { class: "modal-title" },
+          'h5',
+          { class: 'modal-title' },
           `Thanks for requesting a ticket purchase! We will send an email to ${purchaseEmail.value} to complete the order form!`
         )
       )
     );
   }
-  purchaseBtn.addEventListener("click", purchaseTicket);
+  purchaseBtn.addEventListener('click', purchaseTicket);
 });
